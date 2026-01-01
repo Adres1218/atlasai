@@ -1364,3 +1364,12 @@ if __name__ == '__main__':
     # Run app
     port = int(os.environ.get('PORT', 5000))
     app.run(host='0.0.0.0', port=port, debug=False)
+
+    # ==================== VERCEL CONFIG ====================
+
+# Vercel için wsgi
+application = app
+
+if __name__ == '__main__':
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port, debug=False)
